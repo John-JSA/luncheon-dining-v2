@@ -1,0 +1,8 @@
+{
+  "name": "luncheon-dining",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {"check": "node --check 'api/[...path].js' && node --check public/app.js && node --check public/admin.js"},
+  "engines": {"node": ">=20"}
+}
