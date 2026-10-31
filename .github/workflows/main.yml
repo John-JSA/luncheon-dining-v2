@@ -30,7 +30,7 @@ jobs:
         run: npm run check
         
       - name: Scan repository for vulnerabilities
-        uses: aquasecurity/trivy-action@0.33.1
+        uses: aquasecurity/trivy-action@0.36.1
         with:
           scan-type: 'fs'
           scan-ref: '.'
