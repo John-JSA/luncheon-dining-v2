@@ -1,0 +1,27 @@
+YAML
+
+name: Restaurant Website CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+check-website:
+  runs_on: ubuntu-latest
+
+  steps:
+    - name: Download repository code
+    - uses: actions/checkout@v4
+
+    - name: Verify repository files
+      run: |
+        echo "Starting restaurant website checks" 
+        
+
+      
