@@ -18,8 +18,13 @@ jobs:
       - name: Download repository code
         uses: actions/checkout@v4
 
-      - name: Verify repository files
-        run: |
-          echo "Starting restaurant website checks"
-          ls -la
-          echo "Repository check completed"
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Check Node.js version
+        run: node --version
+
+      - name: Run application checks
+        run: npm run check
