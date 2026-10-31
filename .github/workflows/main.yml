@@ -1,4 +1,3 @@
-YAML
 
 name: Restaurant Website CI
 
@@ -12,16 +11,15 @@ permissions:
   contents: read
 
 jobs:
-check-website:
-  runs_on: ubuntu-latest
+  check-website:
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: Download repository code
-    - uses: actions/checkout@v4
+    steps:
+      - name: Download repository code
+        uses: actions/checkout@v4
 
-    - name: Verify repository files
-      run: |
-        echo "Starting restaurant website checks" 
-        
-
-      
+      - name: Verify repository files
+        run: |
+          echo "Starting restaurant website checks"
+          ls -la
+          echo "Repository check completed"
